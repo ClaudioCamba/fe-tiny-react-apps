@@ -1,9 +1,10 @@
-function List({ listItems }, { addItem }) {
-  console.log(listItems);
+import SingleItem from './SingleItem';
 
-  return listItems.map((item) => {
-    return <li>{item}</li>;
-  });
+function List({ listItems }) {
+  return listItems.map((item,i) => {
+    return <SingleItem key={`${i}`+item} singleItem={item} />
+});
+
 }
 
 export default List;

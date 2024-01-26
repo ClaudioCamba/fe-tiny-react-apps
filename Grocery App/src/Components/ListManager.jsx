@@ -1,13 +1,15 @@
 import { useState } from "react";
 import List from "./List";
+import AddItem from "./AddItem";
 
 function ListManager() {
-  const [list, setList] = useState(["eggs", "milk"]);
+  const [listArray, setList] = useState(["eggs", "milk"]);
   return (
     <>
       <h2>Our Grocery List</h2>
+     <AddItem setList={setList}/>
       <ul>
-        <List listItems={list} addItem={setList} />
+        <List listItems={listArray}/>
       </ul>
     </>
   );
