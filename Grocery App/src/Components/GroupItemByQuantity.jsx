@@ -23,8 +23,8 @@ function GroupItemByQuantity({ setList }) {
 
   return (
     <section>
-      <label forHTML="orderQuanity">Order list by quantities?</label>
-      <input type="checkbox" onChange={handleQuantityCheckbox} />
+      <label htmlFor="orderQuantity">Order list by quantities?</label>
+      <input id="orderQuantity" type="checkbox" onChange={handleQuantityCheckbox} />
     </section>
   );
 }
